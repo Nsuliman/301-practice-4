@@ -48,7 +48,11 @@ function Person (name,age)
 {
     this.name = name;
     this.age = age;
+    this.dogAge = age * 7 ;
+    Person.all.push(this);
 }
+Person.all =[];
+
 
 let allKeys = Object.keys(fileJson.children);          //[zach,allie]
 let zachkey = Object.keys(fileJson.children)[0];       // zach
@@ -73,3 +77,12 @@ Person.prototype.dogYears = function () {
 }
 zach.dogYears();
 allie.dogYears();
+
+
+//6.For each Person in the children array, output their name, current age, and age in dog years
+console.log(' ---------------------------- 6th Feature-Output children Name,Age and DoyAge -------------------'); 
+
+// Person.all =[];                                          // created after the constructor function directly 
+//Add this properties to the consturctor function ( this.dogAge = age * 7 ;)
+console.log('Person.all : ' , Person.all);
+
