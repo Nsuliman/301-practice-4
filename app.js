@@ -24,3 +24,19 @@ jsonToArr.forEach(eachProp =>
         console.log('job : ', eachProp.job);
     });
 
+
+//3.Output a list (array) of all pets that start with the letter 'R'
+console.log(' ---------------------------- 3rd Feature-Output All pets with R ---------------------------------'); 
+
+jsonToArr.filter ( eachPet =>
+    {
+        if (eachPet.pets)
+        {
+            eachPet.pets.filter(r =>
+                {
+                    let indx = r.charAt(0);
+                    if ( indx === 'R')
+                    console.log('r : ', r);
+                })
+        }
+    });
