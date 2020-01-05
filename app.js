@@ -40,3 +40,27 @@ jsonToArr.filter ( eachPet =>
                 })
         }
     });
+
+//4.Create a new instance of "Person" for each child, with the properties "name" and "age"
+console.log(' ---------------------------- 4th Feature-Output new instance of childs ---------------------------'); 
+
+function Person (name,age)
+{
+    this.name = name;
+    this.age = age;
+}
+
+let allKeys = Object.keys(fileJson.children);          //[zach,allie]
+let zachkey = Object.keys(fileJson.children)[0];       // zach
+let allieKey = Object.keys(fileJson.children)[1];      // allie
+
+let allVals = Object.values(fileJson.children);          //[ { age: 21 }, { age: 14 } ]
+let zachVal = Object.values(fileJson.children)[0].age;       // zach
+let allieVal = Object.values(fileJson.children)[1].age;      // allie
+
+let zach = new Person (zachkey , zachVal);
+let allie = new Person (allieKey , allieVal);
+
+console.log(' zach Instance : ', zach , '\n allie Instance : ' ,  allie);
+
+
