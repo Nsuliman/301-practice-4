@@ -36,7 +36,7 @@ jsonToArr.filter ( eachPet =>
                 {
                     let indx = r.charAt(0);
                     if ( indx === 'R')
-                    console.log('r : ', r);
+                    console.log('Pets Starts With R : ', r);
                 })
         }
     });
@@ -64,3 +64,12 @@ let allie = new Person (allieKey , allieVal);
 console.log(' zach Instance : ', zach , '\n allie Instance : ' ,  allie);
 
 
+//5.Create a method for a Person instance that outputs their age in dog years (their current age * 7)
+console.log(' ---------------------------- 5th Feature-Output children age in dogs years ----------------------'); 
+
+Person.prototype.dogYears = function () {
+    let dogY = this.age*7;
+    console.log(`dog years age for ${this.name} : `, dogY);
+}
+zach.dogYears();
+allie.dogYears();
